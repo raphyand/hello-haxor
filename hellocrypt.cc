@@ -1,9 +1,9 @@
-// Tuffy Titan
+// Raphael S. Andaya
 // CPSC 353-01
 // 2021-06-04
-// tuffy.titan@csu.fullerton.edu
-// @tuffytitan
-//
+// raphyand@csu.fullerton.edu
+// @raphyand
+// Copyright 2021 raphyand?
 // Assignment 00
 //
 // Demonstrate the traditional use of crypt.
@@ -34,6 +34,14 @@
 /// Given a user provided salt and clear text, use crypt and print
 /// the cipher text.
 int main(int argc, char const* argv[]) {
+  if (argc < 3) {
+    std::cout << "Two arguments are needed. \n";
+  }
+
+  std::string salt = std::string(argv[1]);
+  std::string clear_text = std::string(argv[2]);
+  char *cipher_text = crypt(clear_text.c_str(), salt.c_str());
+  std::cout << "Cipher: " << cipher_text << "\n";
 
   return 0;
 }
