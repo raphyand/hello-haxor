@@ -46,7 +46,7 @@ int main(int argc, char const* argv[]) {
   std::string salt = std::string(argv[1]);
   std::string clear_text = std::string(argv[2]);
   char *cipher_text = crypt(clear_text.c_str(), salt.c_str());
-  std::cout << "Cipher: " << cipher_text << "\n";
+  std::cout << "The cipher text is \"" << cipher_text << "\"\n";
 
   return 0;
 }
